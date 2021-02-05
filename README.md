@@ -1,15 +1,15 @@
 # Movie-Streaming-Site-Faculty-Project
  
-This project is a web application made with java.A bank tool where you can see your cards, personal information and statistics on how much money you have in your balance,accounts. You can update your information and add new cards.
+This project is a web site made as a personalized faculty project where you have to create an account, and you can watch movies and find out certain informations about them.The predominant technologies used in this project are:Xampp and mysql(for movies DB), mongoDB(for users), ejs(viewing-engine), node.js for the backend with JSON parser and passport for the login system.The front end was all CSS, made scallable, with different transitions and animations based on display-width.
 
-#How to Use
-This app is locally hosted so make sure you put the data base scripts in mysql for exqample and connect in the utils folder with the credentials you have ,then make sure you have the same dependencies as in the .pom file.
+# How to Use
+The app is all local, use node app.js to start the localhost server and connect to the DB, start xampp and use the .sql script to create the DB and populate it.In the videos folder under public make sure to have the videos downloaded under the specified name in the DB, Then you can access localhost on the port specified and start navigating the site.
 
-#What I Learned
-• Different Java aspects such as Servlets and Jsp files and how to handle them and how to make them work together.
+# What I Learned
+• MongoDB integration with node.js using middleware such as mongoose and passport.
 
-• Connecting the front-end aspect of an application with the back-end.
+• Working with and parsing JSON objects thorugh HTTP requests.
 
-• Extracting and parsing information from a DB.
+• Using Express with EJS
 
-• Polished skills with Javascript, Css and Html languages in combination with Java language, extracting data from one and working with that data in the other.
+• Organising a website with a generic layout.
