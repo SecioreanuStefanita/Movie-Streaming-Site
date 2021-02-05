@@ -1,0 +1,173 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+:root {
+ 
+  --gray: #777;
+  --gray-dark: #333;
+  --primary: #eb6864;
+  --light: #f8f9fa;
+  --dark: #222;
+ 
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+ 
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+  text-align: left;
+  background-color: #fff;
+}
+
+.container.light {
+  
+  margin-top: 3rem;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    color: var(--gray-dark);
+  }
+  .container.dark {
+  
+    margin-top: 3rem;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+     color:var(--light);
+     background-color: var(--gray-dark);
+    }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+
+
+@media print {
+    #elem{
+      position:fixed;
+      right:0;
+      opacity: 1;
+      top:0;
+      height: 3%;
+      width: 100vw;
+      border:4px solid yellow;
+      background-color:red !important;
+      -webkit-print-color-adjust: exact;
+     
+    }
+  
+  }
+
+  #link-top{
+    position:fixed;
+    bottom:0.3em;
+    opacity:0.5;
+    left:0.3em;
+    width:3rem;
+    box-sizing: border-box;
+    height:3rem;
+    line-height:3rem;
+    text-align:center;
+    border:1px solid grey;
+    border-radius:50%;
+    background: rgb(220,220,220);
+  }
+  #link-top:hover{
+    opacity:1;
+  }
+  #triunghi{
+    height:0px;
+    width:0;
+    display:inline-block;
+    border-bottom:1.5rem solid grey;
+    border-left:1rem solid transparent;
+    border-right:1rem solid transparent;
+    vertical-align: top;
+    transform: translateY(30%);
+  }
+
+
+ 
+
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+    
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+    
+  }
+  
+  @media (min-width: 992px) {
+    .container{
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+    
+  }
+  body{ 
+    background: url(/images/caractere_film_poza.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  }
+
+
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

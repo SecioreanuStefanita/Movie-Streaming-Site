@@ -1,0 +1,66 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/meniu.css">
+</head>
+
+    	<nav>
+        <label id="hamburger" for="ch-menu">
+          <img src="/images/Hamburger_icon_alb.png" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
+        <ul class="menu">
+          
+          <li><a href="homepage"><i class="fa fa-home" aria-hidden="true"></i>Acasa</a></i></li>
+  
+          <li><a href="filme">Filme</a></li>
+          <li><a onclick="lightDark()">Light/Dark</a></li>
+          <li>
+            <label for="opt_galerii">
+              Galerii
+            </label>
+            <input class="ch-submenu" type="checkbox" id="opt_galerii" onmouseout="functieSubmeniu()">
+            <ul class="submenu">
+              <li><a href="homepage#g_stat">Statica</a></li>
+              <li><a href="homepage#galerie-animata">Animatie</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </nav>
+
+      <script>
+        function functieSubmeniu(){
+          document.getElementById("submenu").style.display="block";
+        }
+
+        function lightDark(){
+          var lightDark=localStorage.getItem("lightDark");
+          var clasa_curenta=document.getElementsByClassName("container");
+          if(lightDark==null||lightDark==undefined){
+            localStorage.setItem("lightDark",document.getElementById("background").className);
+          }else{
+            document.getElementById("background").className=localStorage.getItem("lightDark");
+          }
+          if(localStorage.getItem("lightDark")=="container dark"){
+
+            document.getElementById("background").className=localStorage.getItem("lightDark");
+            localStorage.setItem("lightDark","container light");
+
+          }else{
+
+            document.getElementById("background").className=localStorage.getItem("lightDark");
+            localStorage.setItem("lightDark","container dark");
+
+          }
+         
+        
+        }
+      </script>
+
+ 
+    
+
+ 
+
+ 
+
+  

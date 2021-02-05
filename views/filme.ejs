@@ -1,0 +1,74 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/filme.css">
+</head>
+
+<section>
+    <form action="filme" method="post">
+        <label for="name">Search by name: </label>
+        <input type="text" id="nume" name="nume"><br>
+        <label for="box_office">Box office between 88 mill. and 701 mill.</label>
+        <input type="range" id="box_office" name="box_office" min="88000000" max="701800000"><br>
+        <label for="age_restriction">Age restriction:</label>
+  <select id="age_restriction" name="age_restriction">
+  <option value="12+">12+</option>
+  <option value="16+">16+</option>
+  <option value="18+">18+</option>
+  <option value="none">None</option>
+</select>
+<form action="/action_page.php">
+    <p>Please select a genere:</p>
+    <input type="radio" id="Comedy" name="categorie" value="Comedy">
+    <label for="Comedy">Comedy</label><br>
+    <input type="radio" id="Drama" name="categorie" value="Drama">
+    <label for="Drama">Drama</label><br>
+    <input type="radio" id="Fantasy" name="categorie" value="Fantasy">
+    <label for="Fantasy">Fantasy</label><br>
+    <input type="radio" id="Sci-Fi" name="categorie" value="Sci-Fi">
+    <label for="Sci-Fi">Sci-Fi</label><br>
+    <input type="radio" id="Biography" name="categorie" value="Biography">
+    <label for="Biography">Biography</label><br>
+    <input type="radio" id="Animation" name="categorie" value="Animation">
+    <label for="Animation">Animation</label><br>
+     <input type="radio" id="Romance" name="categorie" value="Romance">
+    <label for="Romance">Romance</label><br>
+    <input type="radio" id="All" name="categorie" value="All" checked>
+    <label for="All">All</label><br>
+        <input type="submit" value="Filter">
+      </form>
+
+</section>
+
+<main>
+
+  <% print.forEach(function (date) { %>
+      
+    <article class="filme" id="artc-<%= date.id %>">
+      <a href="film_selectat/<%= date.id %>">
+     <h1 id="<%= date.id %>"><%= date.nume %></h1> 
+      <div id="poza" class="col-50">
+        <img src="<%= date.imagine %>" alt="Imagine">
+      <ul>
+        <li><strong style="color: brown;">Office:</strong> <%= date.box_office %> $</li>
+        <li><strong style="color: brown;">Age Restriction:</strong><%= date.varsta_recomandata %></li>
+        <li><strong style="color: brown;">Cast:</strong><%= date.cast %></li>
+        <li><strong style="color: brown;">Date(US):</strong>
+          <time datetime=" <%= date.data %>"> <%= date.data %></time></li>
+        <% if(date.e_premiat==1){ %>
+        <li><strong style="color: brown;">Prized:</strong> YES</li>
+        <% }else{ %>
+        
+          <li><strong style="color: brown;">Prized:</strong> NO</li>
+          <% } %>
+      </ul>
+      </div>
+      <div id="text1" class="col-50">
+        <h2>Generes:<%= date.categorie %> </h2>
+        <h3>Description:</h3>
+        <p><%= date.descriere %></p>
+      </div>
+    </a>
+      
+    </article>
+                               
+<% }) %>
+</main>

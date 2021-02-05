@@ -1,0 +1,66 @@
+
+  <head>
+    <link rel="stylesheet" href="/stylesheets/film_selectat.css">
+  </head>
+  <% print.forEach(function (date) { %>
+      
+    <article class="filme" id="artc-<%= date.id %>">
+     <h1 id="<%= date.id %>"><%= date.nume %></h1> 
+     
+        <img src="<%= date.imagine %>" alt="Imagine" >
+      
+       
+        <h3>Age Restriction:</h3>
+        <p><%= date.varsta_recomandata %></p>
+        <h3>Cast :</h3>
+        <p><%= date.cast %></p>
+        <h3>Date(US):</h3>
+        <p><%= date.data %></p>
+        <% if(date.e_premiat==1){ %>
+            <h3>Prized:</h3>
+        <p> YES</p>
+        <% }else{ %>
+        
+            <h3>Prized:</h3>
+            <p> NO</p>
+          <% } %>
+     
+
+        <h3>Generes:</h3>
+
+        <% var listaCategori=date.categorie.split(','); 
+        listaCategori.forEach(function (categorie) {
+        %>
+        <li><%= categorie %></li>
+        <% }) %> 
+        <h3>Description:</h3>
+        <p><%= date.descriere %></p>
+     
+      <video src="<%= date.cale_video %>" type='video/x-matroska; codecs="theora, vorbis"' autoplay controls onerror="failed(event)" ></video>
+    </article>
+                               
+<% }) %>
+
+<script>
+    function failed(e) {
+      
+      switch (e.target.error.code) {
+        case e.target.error.MEDIA_ERR_ABORTED:
+          alert('You aborted the video playback.');
+          break;
+        case e.target.error.MEDIA_ERR_NETWORK:
+          alert('A network error caused the video download to fail part-way.');
+          break;
+        case e.target.error.MEDIA_ERR_DECODE:
+          alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
+          break;
+        case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+          alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
+          break;
+        default:
+          alert('An unknown error occurred.');
+          break;
+      }
+    }
+   </script>
+   

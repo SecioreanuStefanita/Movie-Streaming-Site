@@ -1,0 +1,47 @@
+main{
+    padding-top:3rem;
+    min-width:200px;
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+    background:white;
+    display:grid;
+    grid-template-columns: auto;}
+
+
+.col-50{
+    width: 49%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+article{
+    border: 0.2rem solid black;
+    border-bottom: 0rem;
+    border-left:10px solid gold;
+}
+article:nth-child(odd){
+    background-color: rgba(108, 122, 137, 0.5);
+}
+article:nth-child(even){
+    background-color: rgba(103, 128, 159, 1);
+}
+article:last-child{
+    border-bottom: 0.2rem solid black;
+}
+ul{
+    list-style-position: inside;
+    margin-left: 0.5em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+
+
+

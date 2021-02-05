@@ -1,0 +1,235 @@
+
+*{
+  padding:0;
+  margin:0;
+  text-indent:0;
+}
+
+nav{
+width:100%;
+position:fixed;
+background: black;
+height:3rem;
+top:0px;
+left:0px;
+font-family:Arial, Helvetica, sans-serif;
+z-index:20;
+}
+  ul.menu>li, ul.menu>li>ul.submenu>li{
+    display:block;		
+    font-size:1.2rem;
+    font-weight:bold;
+    height:3rem;
+    line-height:3rem;
+    text-align:center;		
+    list-style-type:none;    
+background: black;
+
+
+}
+ul.menu>li{
+ float:left;
+ width:6rem;
+ 
+}
+
+ul.menu>li>ul.submenu{
+    position:relative;
+    top:0px;
+}
+ul.menu>li>a,ul.menu>li>label,ul.submenu>li>a{
+    display:block;
+    width: 100%;
+    height:	100%;
+    text-decoration:none;
+    color:white;
+  
+
+
+}
+
+
+ul.menu>li>a::after{
+  content:"";
+  display:block;
+  height: 0.5rem;
+  animation: animatie_dupa_hover 0.3s linear 0.3s; 
+  animation-iteration-count: 1;
+   animation-fill-mode:forwards; 
+ transform: translateY(-0.5rem);
+
+
+/* transition: all 0.5s linear; */
+}
+ul.menu>li>a:hover::after{
+  content:"";
+    display:block;
+    height: 0.5rem;
+    
+  
+    transform: translateY(-0.5rem);
+    animation: animatie_hover 0.3s linear 0.3s; 
+   animation-iteration-count: 1;
+   animation-fill-mode:forwards; 
+  }
+  @keyframes animatie_hover{
+    0%{ opacity: 1; width: 0%;}
+    10%{ opacity: 1; background: linear-gradient(90deg, rgba(0,0,0,1) 27%, rgba(74,74,74,1) 46%, rgba(255,255,255,1) 100%);width: 10%;}
+    40%{ opacity: 1;background: linear-gradient(90deg, rgba(0,0,0,1) 27%, rgba(74,74,74,1) 46%, rgba(255,255,255,1) 100%);width: 40%;}
+    100%{ opacity: 1; background: linear-gradient(90deg, rgba(0,0,0,1) 27%, rgba(74,74,74,1) 46%, rgba(255,255,255,1) 100%);width: 100%;}
+    
+  }
+  @keyframes animatie_dupa_hover{
+    0%{ opacity: 1; width: 100%;}
+    10%{ opacity: 1; background: linear-gradient(90deg, rgba(0,0,0,1) 27%, rgba(74,74,74,1) 46%, rgba(255,255,255,1) 100%);width: 90%;}
+    40%{ opacity: 0.5;background: linear-gradient(90deg, rgba(0,0,0,1) 27%, rgba(74,74,74,1) 46%, rgba(255,255,255,1) 100%);width: 60%;}
+    100%{ opacity: 0; background: linear-gradient(90deg, rgba(0,0,0,1) 27%, rgba(74,74,74,1) 46%, rgba(255,255,255,1) 100%);width: 0%;}
+    
+  }
+
+  
+  
+
+
+
+ 
+#hamburger{
+  display:none;
+  height:3rem;
+}
+#hamburger img{
+  height:100%;
+  width:auto;
+}
+#ch-menu, .ch-submenu{
+  display:none;
+}
+ul.submenu{
+  display:none;
+}
+
+/* aparitie submeniu */ 
+
+.ch-submenu:checked~ul.submenu{
+  display:block;  
+  opacity: 0;
+  animation: animatie_submeniu 0.5s linear 0.5s; 
+        animation-iteration-count: 1;
+         animation-fill-mode:forwards; 
+
+}
+
+@keyframes animatie_submeniu{
+  0% { transform: scaleY(0);
+     transform-origin: center;opacity: 1;}
+   50% { transform: scaleY(0.5);
+     transform-origin: center;opacity: 1;
+   }
+   100%{transform: rotate(1);
+     transform-origin: center;opacity: 1;}
+   
+ }
+.ch-submenu:checked~ul.submenu>li:hover>a{
+  
+  background:rgba(255,255,255,0.5);
+        color: black;
+       }
+       
+@media screen and (max-width: 900px) {
+  
+  ul.menu>li:nth-child(1)>a{
+    font-size: 0;
+    color: transparent; 
+  }
+  ul.menu>li:nth-child(1)>a>i{
+    font-size: 1.5rem;
+    color: white;
+  }
+
+
+
+}
+@media screen and (max-width: 600px) {
+    nav{
+        z-index:100;
+      }
+      #hamburger{
+        display:block;
+        
+      }
+
+      ul.menu{
+        display:none;  
+      }
+      #ch-menu:checked~ul.menu{
+        
+        animation: animatie_rotire 0.5s linear 0.5s; 
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;  
+        display: block;
+        opacity: 0;
+      }
+
+      @keyframes animatie_rotire{
+       0% { transform: rotate(0deg);
+          transform-origin: top left;opacity: 0;}
+        50% { transform: rotate(180deg);
+          transform-origin: top left;opacity: 0;
+        }
+        100%{transform: rotate(360deg);
+          transform-origin: top left;opacity: 1;}
+        
+      }
+      
+      ul.menu a::after{
+        content:"";
+        display:block;
+        height: 0.5rem;
+        animation: niciuna 0.3s linear 0.3s; 
+        animation-iteration-count: 1;
+         animation-fill-mode:forwards; 
+       transform: translateY(-0.5rem);
+      
+      
+      /* transition: all 0.5s linear; */
+      }
+      ul.menu a:hover::after{
+        content:"";
+          display:block;
+          height: 0.5rem;
+          
+        
+          transform: translateY(-0.5rem);
+          animation: niciuna 0.3s linear 0.3s; 
+         animation-iteration-count: 1;
+         animation-fill-mode:forwards; 
+        }
+        @keyframes niciuna{
+          0% {}
+           50% {}
+           100%{}
+         }
+
+      ul.menu>li{
+        width:100%;
+        background:black;
+      }
+      ul.menu a:hover,ul.menu label:hover{
+        background:rgba(255,255,255,0.5);
+        color: black;
+      }
+      ul.menu>li:nth-child(1)>a{
+        font-size: 0;
+        color: transparent; 
+      }
+      ul.menu>li:nth-child(1)>a>i{
+        font-size: 1.5rem;
+        color: white;
+      }
+
+     
+     
+      
+    
+
+}
