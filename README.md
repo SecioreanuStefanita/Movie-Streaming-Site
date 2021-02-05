@@ -1,4 +1,4 @@
-# Movie-Streaming-Site-Faculty-Project
+# Movie-Streaming-Site
  
 This project is a web site made as a personalized faculty project where you have to create an account, and you can watch movies and find out certain informations about them.The predominant technologies used in this project are:Xampp and mysql(for movies DB), mongoDB(for users), ejs(viewing-engine), node.js for the backend with JSON parser and passport for the login system.The front end was all CSS, made scallable, with different transitions and animations based on display-width.
 
