@@ -10,6 +10,6 @@ The app is all local, use node app.js to start the localhost server and connect 
 
 • Working with and parsing JSON objects thorugh HTTP requests.
 
-• Using Express with EJS
+• Using Express with EJS.
 
-• Organising a website with a generic layout.
+• Creating a log-in system with security implemented, such as sql injection prevention, parsing and coding data through a hash.
